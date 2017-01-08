@@ -1,0 +1,52 @@
+{
+  "name": "express-mongoose-plain-es6-rest-api",
+  "version": "1.0.0",
+  "description": "A fork of https://github.com/KunalKapadia/express-mongoose-es6-rest-api without Babel (plain ES6)",
+  "author": "Kunal Kapadia <kunalkapadia12@gmail.com>, leob <leobdev@gmail.com>",
+  "main": "index.js",
+  "private": false,
+  "engines": {
+    "node": ">=4.6.0",
+    "npm": ">=2.15.9",
+    "yarn": ">=0.17.9"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development NODE_PATH=src/ nodemon index.js",
+    "debug": "cross-env NODE_ENV=development NODE_PATH=src/ nodemon --debug-brk --inspect index.js",
+    "test": "cross-env NODE_ENV=test NODE_PATH=src/ nodemon node_modules/mocha/bin/_mocha -- --ui bdd --reporter spec --colors ./test/**/*.test.js",
+    "lint": "esw *.js server config --color",
+    "lint:watch": "yarn lint -- --watch",
+    "test:watch": "yarn test -- --watch"
+  },
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "compression": "1.6.2",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.1",
+    "debug": "^2.4.5",
+    "express": "4.14.0",
+    "express-jwt": "5.1.0",
+    "express-validation": "1.0.1",
+    "express-winston": "2.1.2",
+    "helmet": "3.1.0",
+    "http-status": "^0.2.0",
+    "joi": "10.0.6",
+    "jsonwebtoken": "7.1.9",
+    "method-override": "^2.3.5",
+    "mongoose": "4.7.4",
+    "morgan": "1.7.0",
+    "winston": "2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "cross-env": "3.1.3",
+    "del": "^2.2.0",
+    "eslint": "3.12.0",
+    "eslint-config-airbnb-base": "7.1.0",
+    "eslint-plugin-import": "1.16.0",
+    "eslint-watch": "2.1.14",
+    "mocha": "3.2.0",
+    "supertest": "2.0.1"
+  },
+  "license": "MIT"
+}

@@ -33,6 +33,8 @@ the following commands:
 ```
 # move into the dist directory you've copied - THIS IS IMPORTANT, PM2 NEEDS TO BE RUN FROM WITHIN THE DIST DIRECTORY !!
 cd dist
+
+# start the app:
 pm2 start pm2.json
 ```
 

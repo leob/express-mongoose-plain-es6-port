@@ -1,0 +1,14 @@
+{
+  "apps" : [{
+    "name"        : "express-mongoose-plain-es6-rest-api",
+    "script"      : "index.js",
+    "args"        : [],
+    "watch"       : false,
+    "merge_logs"  : false,
+    "cwd"         : "",
+    "env": {
+      "NODE_ENV": "production",
+      "NODE_PATH": "src/"
+    }
+  }]
+}

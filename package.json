@@ -13,11 +13,11 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development NODE_PATH=src/ nodemon index.js",
     "debug": "cross-env NODE_ENV=development NODE_PATH=src/ nodemon --debug-brk --inspect index.js",
-    "test": "cross-env NODE_ENV=test NODE_PATH=src/ nodemon node_modules/mocha/bin/_mocha -- --ui bdd --reporter spec --colors ./test/**/*.test.js",
+    "test": "cross-env NODE_ENV=test NODE_PATH=src/ node_modules/mocha/bin/mocha --ui bdd --no-exit --reporter spec --colors ./test/**/*.test.js",
+    "test:watch": "yarn test -- --watch",
     "build": "gulp",
     "lint": "esw *.js server config --color",
     "lint:watch": "yarn lint -- --watch",
-    "test:watch": "yarn test -- --watch"
   },
   "dependencies": {
     "body-parser": "1.15.2",

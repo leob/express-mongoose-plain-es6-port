@@ -20,6 +20,8 @@ if (config.env === 'development') {
   app.use(logger('dev'));
 }
 
+winstonInstance.info('STARTING');
+
 // parse body params and attache them to req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,7 +44,7 @@ if (config.env === 'development') {
     winstonInstance,
     meta: true, // optional: log meta data about request (defaults to true)
     msg: 'HTTP {{req.method}} {{req.url}} {{res.statusCode}} {{res.responseTime}}ms',
-    colorStatus: true // Color the status code (default green, 3XX cyan, 4XX yellow, 5XX red).
+    colorStatus: process.stdout.isTTY // Color the status code (default green, 3XX cyan, 4XX yellow, 5XX red)
   }));
 }
 

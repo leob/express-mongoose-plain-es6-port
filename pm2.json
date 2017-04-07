@@ -3,8 +3,10 @@
     "name"        : "express-mongoose-plain-es6-rest-api",
     "script"      : "index.js",
     "args"        : [],
-    "watch"       : false,
-    "merge_logs"  : false,
+    "watch"       : true,
+    "merge_logs"  : true,
+    "error_file"      : "../logs/out.log",
+    "out_file"        : "../logs/out.log",
     "cwd"         : "",
     "env": {
       "NODE_ENV": "production",
